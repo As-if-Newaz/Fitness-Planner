@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Fitness Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" class="logo-image" />
+        <span class="logo-text">AI FITNESS PLANNER</span>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+      <!-- Hero Section -->
+      <div class="hero">
+        <button class="sparkle-btn">✨</button>
+        <h1 class="hero-title">
+          BUILD YOUR <span class="highlight">PLAN</span>
+        </h1>
+        <p class="hero-subtitle">
+          Share a few details and we'll build your<br />perfect weekly fitness
+          routine.
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form id="fitnessForm">
+        <!-- Body Stats Section -->
+        <div class="section-card">
+          <div class="section-header">
+            <span class="section-title">BODY STATS</span>
+          </div>
+          <div class="grid-2">
+            <div class="input-group">
+              <label class="input-label">AGE</label>
+              <input
+                type="number"
+                name="age"
+                class="input-field"
+                placeholder="25"
+              />
+            </div>
+            <div class="input-group">
+              <label class="input-label">WEIGHT (KG)</label>
+              <input
+                type="number"
+                name="weight"
+                class="input-field"
+                placeholder="70"
+              />
+            </div>
+            <div class="input-group">
+              <label class="input-label">HEIGHT (CM)</label>
+              <input
+                type="number"
+                name="height"
+                class="input-field"
+                placeholder="170"
+              />
+            </div>
+            <div class="input-group">
+              <label class="input-label">GENDER</label>
+              <div class="gender-buttons">
+                <button type="button" class="gender-btn" data-value="male">
+                  <span>♂</span> MALE
+                </button>
+                <button
+                  type="button"
+                  class="gender-btn active"
+                  data-value="female"
+                >
+                  <span>♀</span> FEMALE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Tier Section -->
+        <div class="section-card">
+          <div class="section-header">
+            <span class="section-title">EXPERIENCE TIER</span>
+          </div>
+          <div class="grid-3">
+            <button type="button" class="select-card" data-value="beginner">
+              <span class="select-card-title">BEGINNER</span>
+              <span class="select-card-subtitle">0-1 YEAR (1hr-1.5hr)</span>
+            </button>
+            <button type="button" class="select-card" data-value="intermediate">
+              <span class="select-card-title">INTERMEDIATE</span>
+              <span class="select-card-subtitle">1-3 YEARS (1.5hr-2hr)</span>
+            </button>
+            <button
+              type="button"
+              class="select-card active"
+              data-value="advanced"
+            >
+              <span class="select-card-title">ADVANCED</span>
+              <span class="select-card-subtitle">3+ YEARS (2hr+)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Primary Objective Section -->
+        <div class="section-card">
+          <div class="section-header">
+            <span class="section-title">PRIMARY OBJECTIVE</span>
+          </div>
+          <div class="grid-6">
+            <button type="button" class="objective-card" data-value="lose-fat">
+              <div class="objective-icon">🔥</div>
+              <span class="objective-label">LOSE FAT</span>
+            </button>
+            <button
+              type="button"
+              class="objective-card active"
+              data-value="build-muscle"
+            >
+              <div class="objective-icon">💪</div>
+              <span class="objective-label">BUILD MUSCLE</span>
+            </button>
+            <button type="button" class="objective-card" data-value="endurance">
+              <div class="objective-icon">🏃</div>
+              <span class="objective-label">ENDURANCE</span>
+            </button>
+            <button type="button" class="objective-card" data-value="mobility">
+              <div class="objective-icon">🧘</div>
+              <span class="objective-label">MOBILITY</span>
+            </button>
+            <button
+              type="button"
+              class="objective-card active"
+              data-value="general"
+            >
+              <div class="objective-icon">⚡</div>
+              <span class="objective-label">GENERAL</span>
+            </button>
+            <button type="button" class="objective-card" data-value="strength">
+              <div class="objective-icon">💪</div>
+              <span class="objective-label">STRENGTH</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Weekly Load Section -->
+        <div class="section-card">
+          <div class="section-header">
+            <span class="section-title">WEEKLY LOAD</span>
+            <span class="days-counter"
+              ><span class="days-number">07</span> DAYS</span
+            >
+          </div>
+          <div class="grid-5">
+            <button type="button" class="day-card" data-value="3">3</button>
+            <button type="button" class="day-card" data-value="4">4</button>
+            <button type="button" class="day-card" data-value="5">5</button>
+            <button type="button" class="day-card" data-value="6">6</button>
+            <button type="button" class="day-card active" data-value="7">
+              7
+            </button>
+          </div>
+        </div>
+
+        <!-- Anything Else Section -->
+        <div class="section-card">
+          <div class="section-header">
+            <span class="section-title">ANYTHING ELSE?</span>
+          </div>
+          <div class="textarea-group">
+            <textarea
+              name="notes"
+              class="textarea-field"
+              rows="4"
+              placeholder="I have a bad knee, only have dumbbells, prefer home workouts, training for a 5k..."
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">GENERATE MY PLAN ✨</button>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
