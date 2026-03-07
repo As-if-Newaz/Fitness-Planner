@@ -51,6 +51,7 @@
                 name="age"
                 class="input-field"
                 placeholder="25"
+                min="0"
               />
             </div>
             <div class="input-group">
@@ -60,6 +61,7 @@
                 name="weight"
                 class="input-field"
                 placeholder="70"
+                min="0"
               />
             </div>
             <div class="input-group">
@@ -69,6 +71,7 @@
                 name="height"
                 class="input-field"
                 placeholder="170"
+                min="0"
               />
             </div>
             <div class="input-group">
@@ -77,11 +80,7 @@
                 <button type="button" class="gender-btn" data-value="male">
                   <i class="fas fa-mars"></i> MALE
                 </button>
-                <button
-                  type="button"
-                  class="gender-btn active"
-                  data-value="female"
-                >
+                <button type="button" class="gender-btn" data-value="female">
                   <i class="fas fa-venus"></i> FEMALE
                 </button>
               </div>
@@ -103,11 +102,7 @@
               <span class="select-card-title">INTERMEDIATE</span>
               <span class="select-card-subtitle">1-3 YEARS (1.5hr-2hr)</span>
             </button>
-            <button
-              type="button"
-              class="select-card active"
-              data-value="advanced"
-            >
+            <button type="button" class="select-card" data-value="advanced">
               <span class="select-card-title">ADVANCED</span>
               <span class="select-card-subtitle">3+ YEARS (2hr+)</span>
             </button>
@@ -128,7 +123,7 @@
             </button>
             <button
               type="button"
-              class="objective-card active"
+              class="objective-card"
               data-value="build-muscle"
             >
               <div class="objective-icon">
@@ -148,11 +143,7 @@
               </div>
               <span class="objective-label">MOBILITY</span>
             </button>
-            <button
-              type="button"
-              class="objective-card active"
-              data-value="general"
-            >
+            <button type="button" class="objective-card" data-value="general">
               <div class="objective-icon">
                 <i class="fas fa-bolt"></i>
               </div>
@@ -180,9 +171,7 @@
             <button type="button" class="day-card" data-value="4">4</button>
             <button type="button" class="day-card" data-value="5">5</button>
             <button type="button" class="day-card" data-value="6">6</button>
-            <button type="button" class="day-card active" data-value="7">
-              7
-            </button>
+            <button type="button" class="day-card" data-value="7">7</button>
           </div>
         </div>
 
