@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Fitness Planner</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="logo">
-        <img src="logo.png" alt="Logo" class="logo-image" />
+      <div class="logo-container">
+        <img src="Logo.png" alt="Fitness Planner Logo" class="logo-icon" />
         <span class="logo-text">AI FITNESS PLANNER</span>
       </div>
     </header>
@@ -19,7 +26,7 @@
     <main class="container">
       <!-- Hero Section -->
       <div class="hero">
-        <button class="sparkle-btn">✨</button>
+        <img class="hero-icon" src="Lightning_icon.png" alt="Lightning icon" />
         <h1 class="hero-title">
           BUILD YOUR <span class="highlight">PLAN</span>
         </h1>
@@ -68,14 +75,14 @@
               <label class="input-label">GENDER</label>
               <div class="gender-buttons">
                 <button type="button" class="gender-btn" data-value="male">
-                  <span>♂</span> MALE
+                  <i class="fas fa-mars"></i> MALE
                 </button>
                 <button
                   type="button"
                   class="gender-btn active"
                   data-value="female"
                 >
-                  <span>♀</span> FEMALE
+                  <i class="fas fa-venus"></i> FEMALE
                 </button>
               </div>
             </div>
@@ -114,7 +121,9 @@
           </div>
           <div class="grid-6">
             <button type="button" class="objective-card" data-value="lose-fat">
-              <div class="objective-icon">🔥</div>
+              <div class="objective-icon">
+                <i class="fas fa-fire"></i>
+              </div>
               <span class="objective-label">LOSE FAT</span>
             </button>
             <button
@@ -122,15 +131,21 @@
               class="objective-card active"
               data-value="build-muscle"
             >
-              <div class="objective-icon">💪</div>
+              <div class="objective-icon">
+                <i class="fas fa-dumbbell"></i>
+              </div>
               <span class="objective-label">BUILD MUSCLE</span>
             </button>
             <button type="button" class="objective-card" data-value="endurance">
-              <div class="objective-icon">🏃</div>
+              <div class="objective-icon">
+                <i class="fas fa-running"></i>
+              </div>
               <span class="objective-label">ENDURANCE</span>
             </button>
             <button type="button" class="objective-card" data-value="mobility">
-              <div class="objective-icon">🧘</div>
+              <div class="objective-icon">
+                <i class="fas fa-spa"></i>
+              </div>
               <span class="objective-label">MOBILITY</span>
             </button>
             <button
@@ -138,11 +153,15 @@
               class="objective-card active"
               data-value="general"
             >
-              <div class="objective-icon">⚡</div>
+              <div class="objective-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
               <span class="objective-label">GENERAL</span>
             </button>
             <button type="button" class="objective-card" data-value="strength">
-              <div class="objective-icon">💪</div>
+              <div class="objective-icon">
+                <i class="fas fa-hand-rock"></i>
+              </div>
               <span class="objective-label">STRENGTH</span>
             </button>
           </div>
@@ -183,7 +202,9 @@
         </div>
 
         <!-- Submit Button -->
-        <button type="submit" class="submit-btn">GENERATE MY PLAN ✨</button>
+        <button type="submit" class="submit-btn">
+          GENERATE MY PLAN <i class="fas fa-sparkles"></i>
+        </button>
       </form>
     </main>
 

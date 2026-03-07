@@ -1,4 +1,5 @@
 $bg: #0A0C10;
+$font: 'Inter';
 $logotextcolor: #fff;
 $sectionbgcolor: #1B1D21;
 $fieldbgColor:#303235;
@@ -6,7 +7,6 @@ $fieldTextColor:#64748B;
 $selectedbuttonColor:#00D2FF;
 $selectedButtonTextColor:#fff;
 
-$h1font-family: Inter;
 $h1font-weight: 900;
 $h1font-style: Black;
 $h1font-size: 48px;
@@ -18,8 +18,6 @@ $h1vertical-align: middle;
 $h1text-transform: uppercase;
 $h1color:#F1F5F9;
 
-
-$h2font-family: Inter;
 $h2font-weight: 900;
 $h2font-style: Black;
 $h2font-size: 14px;
@@ -30,5 +28,556 @@ $h2vertical-align: middle;
 $h2text-transform: uppercase;
 $h2color: #00D2FF;
 
+// $pfont-family: Inter;
+$pfont-weight: 500;
+$pfont-style: Medium;
+$pfont-size: 18px;
+$pleading-trim: NONE;
+$pline-height: 28px;
+$pletter-spacing: -0.4px;
+$ptext-align: center;
+$pvertical-align: middle;
 $pcolor:#94A3B8;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg;
+  color: $logotextcolor;
+  font-family: $font, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  padding: 1.5rem;
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+// Header
+.header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  color: $logotextcolor;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  color: $logotextcolor;
+//   font-family: $font;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+}
+
+// Main Container
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+// Hero Section
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: $h1text-align;
+  margin-bottom: 3rem;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
+}
+
+.sparkle-btn, .hero-icon {
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: $selectedbuttonColor;
+  
+  i {
+    font-size: 20px;
+  }
+  
+  &:hover {
+    background: rgba(0, 210, 255, 0.2);
+    transform: scale(1.05);
+  }
+}
+
+.hero-title {
+  font-weight: $h1font-weight;
+  font-size: $h1font-size;
+  line-height: $h1line-height;
+  letter-spacing: $h1letter-spacing;
+  text-transform: $h1text-transform;
+  color: $h1color;
+  margin-bottom: 1rem;
+  
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
+}
+
+.highlight {
+  color: $selectedbuttonColor;
+}
+
+.hero-subtitle {
+//   font-family: $pfont-family;
+  font-weight: $pfont-weight;
+  font-size: $pfont-size;
+  line-height: $pline-height;
+  letter-spacing: $pletter-spacing;
+  text-align: $ptext-align;
+  color: $pcolor;
+  
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+// Form
+#fitnessForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+// Section Cards
+.section-card {
+  background-color: $sectionbgcolor;
+  border-radius: 24px;
+  padding: 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.25rem;
+    border-radius: 20px;
+  }
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-weight: $h2font-weight;
+  font-size: $h2font-size;
+  line-height: $h2line-height;
+  letter-spacing: $h2letter-spacing;
+  text-transform: $h2text-transform;
+  color: $h2color;
+  
+  @media (max-width: 480px) {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+}
+
+// Days Counter
+.days-counter {
+  font-weight: $h2font-weight;
+  font-size: $h2font-size;
+  letter-spacing: $h2letter-spacing;
+  text-transform: uppercase;
+  color: $fieldTextColor;
+}
+
+.days-number {
+  color: $logotextcolor;
+  font-size: 32px;
+  letter-spacing: 0;
+  margin-right: 0.25rem;
+  
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
+}
+
+// Grid Layouts
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Input Groups
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input-label {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: $fieldTextColor;
+}
+
+.input-field {
+  background-color: $fieldbgColor;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 0.875rem 1rem;
+//   font-family: $font;
+  font-size: 16px;
+  color: $logotextcolor;
+  outline: none;
+  transition: all 0.3s ease;
+  
+  &::placeholder {
+    color: $fieldTextColor;
+  }
+  
+  &:focus {
+    border-color: $selectedbuttonColor;
+    background-color: lighten($fieldbgColor, 3%);
+  }
+}
+
+// Gender Buttons
+.gender-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.gender-btn {
+  background-color: $fieldbgColor;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 0.875rem 0.5rem;
+//   font-family: $font;
+  font-weight: 700;
+  font-size: 14px;
+  color: $fieldTextColor;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  
+  i {
+    font-size: 16px;
+  }
+  
+  &:hover {
+    background-color: lighten($fieldbgColor, 5%);
+  }
+  
+  &.active {
+    background-color: $selectedbuttonColor;
+    color: $selectedButtonTextColor;
+    border-color: $selectedbuttonColor;
+  }
+}
+
+// Select Cards (Experience Tier)
+.select-card {
+  background-color: $fieldbgColor;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  min-height: 100px;
+  
+  &:hover {
+    background-color: lighten($fieldbgColor, 5%);
+    transform: translateY(-2px);
+  }
+  
+  &.active {
+    background-color: $selectedbuttonColor;
+    border-color: $selectedbuttonColor;
+    
+    .select-card-title,
+    .select-card-subtitle {
+      color: $selectedButtonTextColor;
+    }
+  }
+}
+
+.select-card-title {
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $logotextcolor;
+  
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+}
+
+.select-card-subtitle {
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: $fieldTextColor;
+  
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+}
+
+// Objective Cards
+.objective-card {
+  background-color: $fieldbgColor;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 1.25rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 100px;
+  
+  &:hover {
+    background-color: lighten($fieldbgColor, 5%);
+    transform: translateY(-2px);
+  }
+  
+  &.active {
+    background-color: $selectedbuttonColor;
+    border-color: $selectedbuttonColor;
+    
+    .objective-label {
+      color: $selectedButtonTextColor;
+    }
+  }
+}
+
+.objective-icon {
+  font-size: 28px;
+  line-height: 1;
+  color: $logotextcolor;
+  
+  i {
+    font-size: 28px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 24px;
+    
+    i {
+      font-size: 24px;
+    }
+  }
+}
+
+.objective-label {
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $logotextcolor;
+  text-align: center;
+  
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+}
+
+// Day Cards
+.day-card {
+  background-color: $fieldbgColor;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+//   font-family: $font;
+  font-weight: 900;
+  font-size: 24px;
+  color: $logotextcolor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  
+  &:hover {
+    background-color: lighten($fieldbgColor, 5%);
+    transform: translateY(-2px);
+  }
+  
+  &.active {
+    background-color: $selectedbuttonColor;
+    color: $selectedButtonTextColor;
+    border-color: $selectedbuttonColor;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 20px;
+    min-height: 60px;
+  }
+}
+
+// Textarea
+.textarea-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea-field {
+  background-color: $fieldbgColor;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 1rem;
+  font-family: $font;
+  font-size: 15px;
+  line-height: 1.6;
+  color: $logotextcolor;
+  outline: none;
+  resize: vertical;
+  min-height: 120px;
+  transition: all 0.3s ease;
+  
+  &::placeholder {
+    color: $fieldTextColor;
+  }
+  
+  &:focus {
+    border-color: $selectedbuttonColor;
+    background-color: lighten($fieldbgColor, 3%);
+  }
+}
+
+// Submit Button
+.submit-btn {
+  background-color: $selectedbuttonColor;
+  border: none;
+  border-radius: 16px;
+  padding: 1.25rem 2rem;
+  font-family: $font;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $selectedButtonTextColor;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  
+  i {
+    font-size: 16px;
+  }
+  
+  &:hover {
+    background-color: lighten($selectedbuttonColor, 5%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 210, 255, 0.3);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 14px;
+    padding: 1rem 1.5rem;
+  }
+}
+
 
