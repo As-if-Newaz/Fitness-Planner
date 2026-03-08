@@ -1,0 +1,68 @@
+PRODUCT REQUIREMENTS DOCUMENT (PRD)
+Project: AI Fitness Planner Web Application
+Role: Frontend Internship Task
+Date: March 2026
+
+1. PROJECT OVERVIEW
+The AI Fitness Planner is a responsive web application that generates personalized 
+weekly workout schedules. Users input their personal metrics and goals, which are 
+processed by an LLM (via OpenRouter) to return a structured JSON plan rendered 
+visually using custom CSS.
+
+2. TARGET USER
+- Fitness enthusiasts seeking automated, structured scheduling.
+- Users requiring a mobile-friendly way to view their daily exercise routines.
+
+3. FUNCTIONAL REQUIREMENTS
+3.1 User Input Form
+- Collect: Name, Age, Weight, Fitness Level, Primary Goal, and Training Days.
+- Validation: Ensure all required fields are filled before API submission.
+
+3.2 AI Integration
+- Model: OpenRouter (e.g., openai/gpt-oss-120b:free).
+- System Prompt: Must enforce strict JSON output according to the provided schema.
+- Sanitization: Logic to strip potential Markdown backticks (```json) from the response.
+
+3.3 Weekly Plan Display
+- Render 7-day schedule using a card-based UI.
+- Visual coding for workout types (Strength, Cardio, Rest, etc.).
+- Display summary (Total days, Rest days, Focus).
+- Display individual exercise details (Sets, Reps, Duration).
+- Display global tips (Nutrition and Recovery).
+
+4. TECHNICAL CONSTRAINTS
+- Framework: React
+- Styling: Custom CSS only. 
+- STRICT RULE: No UI libraries (Tailwind, Bootstrap, Shadcn, MUI, etc.).
+- Error Handling: App must remain functional if the API fails or returns malformed data.
+- Responsiveness: Must be fully usable on mobile devices.
+
+5. DATA SCHEMA (JSON)
+The application must handle the following structure:
+{
+  "plan_name": string,
+  "weekly_summary": { "total_days": number, "rest_days": number, "focus": string },
+  "days": [
+    {
+      "day": string,
+      "type": "Strength" | "Cardio" | "HIIT" | "Yoga" | "Rest" | "Active Recovery" | "Flexibility",
+      "title": string,
+      "duration_min": number,
+      "intensity": "Low" | "Medium" | "High" | "Max",
+      "calories_est": number,
+      "exercises": [{ "name": string, "sets": number|null, "reps": string|null }],
+      "tip": string
+    }
+  ],
+  "nutrition_tip": string,
+  "recovery_tip": string
+}
+
+6. DESIGN SPECIFICATIONS
+- Attested Images
+- Focus on typography, spacing, and card elevation as defined in the design file.
+
+7. SUCCESS METRICS
+- Accurate rendering of the AI-generated JSON into UI elements.
+- Successful responsive behavior on mobile breakpoints.
+- Clean, maintainable CSS architecture without external UI dependencies.
