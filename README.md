@@ -1,7 +1,8 @@
 # GoZayaan-Submission
-A Frontend aI powered Fitness Planner project assigned by the GoZayaan tech recruitment team 
+
+A Frontend aI powered Fitness Planner project assigned by the GoZayaan tech recruitment team
 Description:
-A simple web application where a user provides basic personal and fitness information, 
+A simple web application where a user provides basic personal and fitness information,
 sends it to an AI model, and the response is displayed as a visual weekly fitness plan using cards and UI elements.
 
 ### Technical Spec:

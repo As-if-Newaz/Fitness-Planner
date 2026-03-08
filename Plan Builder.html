@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Fitness Planner</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -14,19 +14,24 @@
     />
   </head>
   <body>
-    <!-- Header -->
     <header class="header">
       <div class="logo-container">
-        <img src="Logo.png" alt="Fitness Planner Logo" class="logo-icon" />
+        <img
+          src="images/Logo.png"
+          alt="Fitness Planner Logo"
+          class="logo-icon"
+        />
         <span class="logo-text">AI FITNESS PLANNER</span>
       </div>
     </header>
 
-    <!-- Main Container -->
     <main class="container">
-      <!-- Hero Section -->
       <div class="hero">
-        <img class="hero-icon" src="Lightning_icon.png" alt="Lightning icon" />
+        <img
+          class="hero-icon"
+          src="images/Lightning_icon.png"
+          alt="Lightning icon"
+        />
         <h1 class="hero-title">
           BUILD YOUR <span class="highlight">PLAN</span>
         </h1>
@@ -36,9 +41,7 @@
         </p>
       </div>
 
-      <!-- Form -->
       <form id="fitnessForm">
-        <!-- Body Stats Section -->
         <div class="section-card">
           <div class="section-header">
             <span class="section-title">BODY STATS</span>
@@ -88,7 +91,6 @@
           </div>
         </div>
 
-        <!-- Experience Tier Section -->
         <div class="section-card">
           <div class="section-header">
             <span class="section-title">EXPERIENCE TIER</span>
@@ -109,7 +111,6 @@
           </div>
         </div>
 
-        <!-- Primary Objective Section -->
         <div class="section-card">
           <div class="section-header">
             <span class="section-title">PRIMARY OBJECTIVE</span>
@@ -158,7 +159,6 @@
           </div>
         </div>
 
-        <!-- Weekly Load Section -->
         <div class="section-card">
           <div class="section-header">
             <span class="section-title">WEEKLY LOAD</span>
@@ -175,7 +175,6 @@
           </div>
         </div>
 
-        <!-- Anything Else Section -->
         <div class="section-card">
           <div class="section-header">
             <span class="section-title">ANYTHING ELSE?</span>
@@ -190,13 +189,18 @@
           </div>
         </div>
 
-        <!-- Submit Button -->
         <button type="submit" class="submit-btn">
           GENERATE MY PLAN <i class="fas fa-sparkles"></i>
+        </button>
+
+        <button type="button" class="sample-btn" onclick="useSampleData()">
+          <i class="fas fa-vial"></i> VIEW DEMO PLAN
         </button>
       </form>
     </main>
 
-    <script src="script.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/sample-data.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
